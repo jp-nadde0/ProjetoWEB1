@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços | Juan Pablo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <figure>
+                <img src="img/logo-img.jpeg" alt="Logo Juan Pablo">
+            </figure>
+        </div>
+        <h3>Pablo Martins | Desenvolvedor Python & Engenheiro de Dados</h3>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">Sobre Mim</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero services-hero">
+            <div class="hero-content">
+                <h2>Meus Serviços</h2>
+                <p>Soluções modernas, integradas e focadas no crescimento do seu negócio</p>
+            </div>
+        </section>
+
+        <section class="services services-page-grid">
+            
+            <div class="card product-card" data-service="sites">
+                <figure>
+                    <img src="img/site-img.jpg" alt="Criação de Sites">
+                </figure>
+                <h3>Sites Profissionais</h3>
+                <p>Precisando aumentar a clientela do seu negócio? Adquira já seu site, 100% responsivo, moderno e estilizado. Desenvolvemos Sites e Landing Pages com <strong>Django</strong>.</p>
+                <button class="btn-product">Ver Detalhes</button>
+            </div>
+            
+            <div class="card product-card" data-service="sistemas">
+                <figure>
+                    <img src="img/sisg-img.jpg" alt="Sistemas de Gestão Cloud">
+                </figure>
+                <h3>Sistemas de Gestão</h3>
+                <p>Otimize seu tempo e eficiência! Sistemas de estoque e funcionários com <strong>Django</strong> e Deploy em nuvem (<strong>AWS/Azure</strong>), trazendo segurança e escalabilidade.</p>
+                <button class="btn-product">Ver Detalhes</button>
+            </div>
+            
+            <div class="card product-card" data-service="dados">
+                <figure>
+                    <img src="img/data-img.webp" alt="Análise de Dados">
+                </figure>
+                <h3>Análise de Dados & BI</h3>
+                <p>Realizo análises de dados com <strong>Python</strong> e transformo resultados em relatórios e dashboards interativos com <strong>Power BI</strong>.</p>
+                <button class="btn-product">Ver Detalhes</button>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="slider-container">
+                <div class="slider-wrapper" id="slider-wrapper">
+                    </div>
+                <button class="slider-btn prev-btn" id="prev-btn">&#10094;</button>
+                <button class="slider-btn next-btn" id="next-btn">&#10095;</button>
+                
+                <div class="slider-dots" id="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+
+            <h2 id="modal-title">Título do Serviço</h2>
+            <p id="modal-description">Descrição detalhada...</p>
+            <a href="index.html#contact" class="btn-modal-action">Solicitar Orçamento</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2026 <span id="current-year"></span>Pablo Martins</p>
+        <p>Quer agendar um orçamento?</p>
+        <p>📞 (11) 98912-6912 | ✉️ devjuanpablo01@gmail.com | www.pablomartinsdev.com.br</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>

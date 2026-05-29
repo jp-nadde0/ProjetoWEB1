@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Pablo | Software Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <figure>
+                <img src="img/logo-img.jpeg" alt="Logo Juan Pablo">
+            </figure>
+        </div>
+        <h3>Pablo Martins | Desenvolvedor Python & Engenheiro de Dados</h3>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="produtos.html">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Desenvolvedor Python</h2>
+                <p>Desenvolvedor Web & Engenheiro de Dados</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>Sobre Mim</h2>
+            <p>
+                Me Chamo Juan Pablo, tenho 20 anos e estou cursando Análise e Desenvolvimento de Sistemas no <strong>SENAI</strong>. 
+                Também possuo certificados em Programação em Python, Python p/ Data Science, Django, AWS, Azure e Power BI.
+                Atualmente trabalho como Desenvolvedor Backend Especializado em Python construindo API's com processos de ETL para a startup Orway.
+            </p>
+        </section>
+
+        <section class="location">
+            <h2>Onde Trabalho</h2>
+            <p>Coworking - Shopping Golden Square (São Bernardo do Campo)</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.7884727133383!2d-46.55991932509288!3d-23.68352137871606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43b28ccd3909%3A0x77a980c6f8d2f7c2!2sGolden%20Square%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1780007716027!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="card">
+                <figure>
+                    <img src="img/site-img.jpg" alt="Criação de Sites">
+                </figure>
+                <h3>Sites</h3>
+                <p>Precisando aumentar a clientela do seu negócio? Adquira já seu site, 100% responsivo, moderno e estilizado. Desenvolvemos Sites e Landing Pages com <strong>Django</strong>.</p>
+            </div>
+            
+            <div class="card">
+                <figure>
+                    <img src="img/sisg-img.jpg" alt="Sistemas de Gestão Cloud">
+                </figure>
+                <h3>Sistemas de Gestão</h3>
+                <p>Otimize seu tempo e eficiência! Sistemas de estoque e funcionários com <strong>Django</strong> e Deploy em nuvem (<strong>AWS/Azure</strong>), trazendo segurança e escalabilidade.</p>
+            </div>
+            
+            <div class="card">
+                <figure>
+                    <img src="img/data-img.webp" alt="Análise de Dados">
+                </figure>
+                <h3>Análise de Dados</h3>
+                <p>Realizo análises de dados com <strong>Python</strong> e transformo resultados em relatórios e dashboards com <strong>Power BI</strong>.</p>
+            </div>
+        </section>
+        <div class="video-container">
+                <iframe width="100%" height="400" 
+                        src="video/VideoERP.mp4" 
+                        title="Sistema ERP" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        <section id="contact" class="contact-section">
+            <h2>Solicitar Orçamento</h2>
+            
+            <div id="resultado" class="resultado-div" style="display: none;"></div>
+            
+            <form id="form-contato">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Seu Nome Completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail de Contato *</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: seuemail@dominio.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone / WhatsApp *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 99999-9999" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="servico">Serviço Desejado</label>
+                    <select id="servico" name="servico">
+                        <option value="sites">Criação de Sites</option>
+                        <option value="sistemas">Sistemas de Gestão</option>
+                        <option value="dados">Análise de Dados</option>
+                    </select>
+                </div>
+                
+                <div class="form-group radio-group">
+                    <label>Preparação de Urgência:</label>
+                    <div class="radio-options">
+                        <input type="radio" id="urgente" name="urgencia" value="urgente">
+                        <label for="urgente" class="label-inline">Preciso com Urgência</label>
+                        
+                        <input type="radio" id="normal" name="urgencia" value="normal" checked>
+                        <label for="normal" class="label-inline">Prazo Normal</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Detalhes do Projeto</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o que seu negócio precisa..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="termos" name="termos" value="aceito" required>
+                    <label for="termos" class="label-inline">Aceito os termos e dou permissão para contato.</label>
+                </div>
+
+                <button type="submit" id="btn-enviar">Enviar Proposta</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;2026 <span id="current-year"></span>Pablo Martins</p>
+        <p>Quer agendar um orçamento?</p>
+        <p>📞 (11) 98912-6912 | ✉️ devjuanpablo01@gmail.com | www.pablomartinsdev.com.br</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
