@@ -1,29 +1,42 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Primeiro CI
 
 on:
-  # Runs on pushes targeting the default branch
+
   push:
-    branches: ["main"]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+#Regras fp github pages    
 permissions:
   contents: read
   pages: write
   id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+ group: "pages"
+ cancel-in-progress: false
+
 
 jobs:
+  Compilar: 
+  #Cria máquina virtual para usar no pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer o git clone
+        uses: actions/checkout@v4
+
+      - name: Executando primeiro comando
+        run: echo "Hello, world!"
+      
+      - name: Executando dois ou mais comandos
+        run: |
+           ls -l
+           echo Fim do PROCESSO 
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: Compilar
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
